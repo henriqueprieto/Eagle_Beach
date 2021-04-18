@@ -55,7 +55,7 @@ html {
 }
 
 .button-transparent {
-  background-color: transparent;
+  background: transparent;
   border: 2px solid #bfa94f !important;
   color: #bfa94f;
   border-radius: 5px;
@@ -79,6 +79,7 @@ html {
 }
 
 .button-gold {
+  cursor: pointer;
   background-color: #bfa94f;
   border: 2px solid #bfa94f;
   color: #ffffff;
@@ -115,6 +116,88 @@ html {
   -webkit-animation-duration: 1.5s;
   animation-name: fade;
   animation-duration: 1.5s;
+}
+
+.form-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #bfa94f;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .3s ease-in-out;
+  border-radius: 20px;
+}
+.form-loading.active {
+  background: #bfa94f;
+  visibility: visible;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+.form-loading img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-result {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background: #fff;
+  visibility: hidden;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  transition: all .3s ease-in-out;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+  align-items: center;
+}
+.form-result-center {
+  display: flex;
+  width: calc(100% - 40px);
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.form-result-center h3 {
+  font-size: 30px;
+  color: #bfa94f;
+  text-align: center;
+  margin: 0 0 20px;
+  width: 100%;
+}
+.form-result-center p {
+  font-size: 18px;
+  color: #abadb1;
+  font-weight: 400;
+  width: 100%;
+}
+.form-result.active {
+  background: #fff;
+  visibility: visible;
+  opacity: 1;
+  transition: all .3s ease-in-out;
+}
+.form-result-close {
+  border-radius: 5px;
+  width: 167px;
+  cursor: pointer;
+  height: 60px;
+  background: #bfa94f;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  border: none;
+  margin-top: 20px;
 }
 
 @-webkit-keyframes fade {
@@ -942,17 +1025,27 @@ ul.menu-links-desktop {
 }
 
 input#name,
-input#celular,
-input#telefone,
+input#form-celular,
+input#form-telefone,
 input#email {
+  outline: none;
   min-width: 45%;
   border-radius: 6px;
-  padding-top: 23px;
   padding-left: 19px;
-  padding-bottom: 16px;
+  height: 63px;
   font-size: 20px;
   border: 1px solid #707070;
 }
+input#name.error,
+input#form-celular.error,
+input#form-telefone.error,
+input#email.error,
+.how-do-you-prefer.error {
+  color: red;
+  border: 1px solid red;
+}
+
+
 .field-name,
 .field-telefone {
   margin-right: 15px;
@@ -986,12 +1079,18 @@ input#email {
 .how-do-you-prefer {
   min-width: 45%;
   border-radius: 6px;
-  padding-top: 23px;
+  height: 63px;
   padding-left: 19px;
-  padding-bottom: 16px;
   font-size: 20px;
   border: 1px solid #707070;
   margin-bottom: 50px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: calc(100% - 25px) center;
+  background-image: url('../img/chevron-right.svg');
+  background-size: 17px 11px;
 }
 
 .row {
@@ -1028,6 +1127,14 @@ input#email {
   border: 1px solid #bfa94f;
 }
 
+.checkbox > input.error {
+  background: red;
+}
+
+.checkbox > input.error + span {
+  color: red;
+}
+
 .checkbox > input:checked {
   background-color: #bfa94f;
 }
@@ -1042,7 +1149,7 @@ input#email {
   top: 0.2rem;
 }
 
-input:invalid {
+input:required:not(:placeholder-shown):invalid {
   color: red;
   border: 1px solid red !important;
 }
