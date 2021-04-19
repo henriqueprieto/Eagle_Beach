@@ -7,6 +7,10 @@ h1 {
   margin: 0;
 }
 
+.italic {
+  font-style: italic;
+}
+
 p,
 h1,
 h2,
@@ -18,6 +22,7 @@ a {
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
+  line-height: 1.5;
 }
 li {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
@@ -55,52 +60,55 @@ html {
 }
 
 .button-transparent {
-  background: transparent;
   border: 2px solid #bfa94f !important;
   color: #bfa94f;
   border-radius: 5px;
   padding: 20px 40px;
   transition: all 0.9s ease-in-out;
-}
-.button-transparent:hover {
+  background-position-x: 5% !important;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   background-size: 230% !important;
-  background-position-x: 100% !important;
-  border: 2px solid #bfa94f !important;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 0%,
     rgba(255, 255, 255, 0) 50%,
     rgb(191, 169, 79) 50%,
-    rgb(191, 169, 79) 100%
+    rgba(191, 169, 79) 100%
   );
-  color: #fff;
-  border-radius: 5px;
-  transition: all 0.9s ease-in-out;
+}
+.button-transparent:hover {
+  background-position-x: 100% !important;
+  color: #f4f9ff !important;
+  cursor: pointer;
 }
 
 .button-gold {
-  cursor: pointer;
-  background-color: #bfa94f;
-  border: 2px solid #bfa94f;
+  border: 2px solid #bfa94f !important;
   color: #ffffff;
   border-radius: 5px;
   padding: 20px 40px;
-  transition: all 0.9s ease-in-out;
-}
-.button-gold:hover {
+  transition: all 0.2s ease-in-out;
+  background-position-x: 99% !important;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
   background-size: 230% !important;
-  background-position-x: 100% !important;
-  border: 2px solid #bfa94f !important;
   background: linear-gradient(
     90deg,
     rgba(255, 255, 255, 0) 0%,
     rgba(255, 255, 255, 0) 50%,
-    rgba(255, 255, 255, 0) 50%,
-    rgba(255, 255, 255, 0) 100%
+    rgb(191, 169, 79) 50%,
+    rgba(191, 169, 79) 100%
   );
+}
+.button-gold:hover {
+  background-position-x: 5% !important;
   color: #bfa94f;
-  border-radius: 5px;
-  transition: all 0.9s ease-in-out;
+  cursor: pointer;
 }
 
 .transition {
@@ -128,14 +136,14 @@ html {
   opacity: 0;
   width: 100%;
   height: 100%;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   border-radius: 20px;
 }
 .form-loading.active {
   background: #bfa94f;
   visibility: visible;
   opacity: 1;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .form-loading img {
   position: absolute;
@@ -154,7 +162,7 @@ html {
   opacity: 0;
   width: 100%;
   height: 100%;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   display: flex;
   justify-content: center;
   border-radius: 20px;
@@ -184,7 +192,7 @@ html {
   background: #fff;
   visibility: visible;
   opacity: 1;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .form-result-close {
   border-radius: 5px;
@@ -278,6 +286,7 @@ ul.menu-links-desktop {
   list-style-type: none;
   font-size: clamp(13px, calc(0.8125rem + ((1vw - 3px) * 0.1852)), 16px);
   transition: all 0.2s ease-in-out;
+  border-bottom: #ffffff00 2px solid;
 }
 
 .menu-links-desktop li:hover {
@@ -748,9 +757,11 @@ ul.menu-links-desktop {
   transition: background-color 0.6s ease;
 }
 
-.active,
-.ball:hover {
-  background-color: #717171;
+.gallery .gallery-slider-balls .active,
+.gallery .gallery-slider-balls .ball:hover {
+  background-color: #ffffff;
+  height: 17px;
+  width: 17px;
 }
 
 /* Next & previous buttons */
@@ -1045,7 +1056,6 @@ input#email.error,
   border: 1px solid red;
 }
 
-
 .field-name,
 .field-telefone {
   margin-right: 15px;
@@ -1089,7 +1099,7 @@ input#email.error,
   appearance: none;
   background-repeat: no-repeat;
   background-position: calc(100% - 25px) center;
-  background-image: url('../img/chevron-right.svg');
+  background-image: url("../img/chevron-right.svg");
   background-size: 17px 11px;
 }
 
@@ -1426,7 +1436,7 @@ input:required:not(:placeholder-shown):invalid {
     text-align: left;
   }
   .project-offers-blueprints-h2 {
-    margin-top: 50px;
+    margin-top: 110px;
   }
 
   /*For mobile*/
@@ -1536,6 +1546,9 @@ input:required:not(:placeholder-shown):invalid {
     margin-left: 100px;
     margin-right: 100px;
   }
+  .mobile-none {
+    display: none;
+  }
 }
 
 /*mobile version*/
@@ -1637,6 +1650,12 @@ input:required:not(:placeholder-shown):invalid {
     width: 12px;
   }
 
+  .gallery .gallery-slider-balls .active,
+  .gallery .gallery-slider-balls .ball:hover {
+    background-color: #ffffff;
+    height: 14px;
+    width: 14px;
+  }
   .gallery-slider-balls {
     padding-top: 30px;
     padding-bottom: 30px;
