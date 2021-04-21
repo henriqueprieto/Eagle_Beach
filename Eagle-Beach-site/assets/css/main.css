@@ -17,16 +17,14 @@ h2,
 h3,
 label,
 a {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   text-decoration: none;
   line-height: 1.5;
 }
 li {
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
-    Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .bold {
@@ -552,7 +550,7 @@ ul.menu-links-desktop {
   /* Stay in place */
   z-index: 1;
   /* Sit on top */
-  padding-top: 100px;
+  padding-top: 25px;
   /* Location of the box */
   left: 0;
   top: 0;
@@ -574,7 +572,7 @@ ul.menu-links-desktop {
   margin: auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%;
+  width: 70%;
 }
 
 /* The Close Button */
@@ -1276,6 +1274,10 @@ input:required:not(:placeholder-shown):invalid {
     padding-left: 80px;
     padding-right: 80px;
   }
+
+  .find-a-quiet-place-video-modal {
+    padding-top: 25px;
+  }
 }
 
 @media (max-width: 1250px) {
@@ -1839,6 +1841,74 @@ input:required:not(:placeholder-shown):invalid {
   .get-in-home-wave-bottom,
   .get-in-home-wave-top {
     height: 45px;
+  }
+}
+
+@media (max-width: 350px) {
+  .section-building-right img {
+    width: 150px;
+  }
+  .building-logo img {
+    width: 150px;
+  }
+  .realsec-logo-area img {
+    width: 150px;
+  }
+  .gallery-text h2 {
+    font-size: 25px;
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+  .find-a-quiet-row {
+    display: flex;
+    flex-direction: row;
+    padding-top: 15px;
+    padding-left: 15px;
+  }
+  .footer-logo img {
+    width: 150px;
+  }
+
+  .form {
+    width: 70%;
+  }
+  .form-wrap {
+    background-color: #ffffff;
+  }
+
+  input#name,
+  input#form-celular,
+  input#form-telefone,
+  input#email {
+    padding-left: 10px;
+    font-size: 16px;
+  }
+  .mobile-nav {
+    width: 80%;
+  }
+  .button-transparent,
+  .button-gold {
+    padding: 15px 30px;
+  }
+}
+
+@media (max-width: 200px) {
+  .menu-logo-img img {
+    width: 90px;
+  }
+  .menu-logo-img {
+    margin-left: 15px;
+  }
+  .header-wrap-right,
+  .section-building-right {
+    margin-right: 0px;
+  }
+  .find-a-quiet-icon-img {
+    margin-right: 20px;
+  }
+  .button-transparent,
+  .button-gold {
+    font-size: 12px;
   }
 }
 /*end media querys*/
