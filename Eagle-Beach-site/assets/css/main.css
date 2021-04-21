@@ -1502,13 +1502,13 @@ input:required:not(:placeholder-shown):invalid {
 
   .section-realsec {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 0fr 1fr;
     grid-template-areas:
       "realsec-logo-area "
       "realsec-description-area";
     background-position: top;
     background-size: contain;
-    padding: 100px 100px 90px 100px;
+    padding: 90px 60px 90px 60px;
   }
 
   .row {
@@ -1702,7 +1702,7 @@ input:required:not(:placeholder-shown):invalid {
     height: 400px;
   }
   .section-realsec {
-    padding: 100px 50px 90px 50px;
+    padding: 90px 20px 90px 20px;
   }
   .realsec-description-area p {
     font-size: 14px;
