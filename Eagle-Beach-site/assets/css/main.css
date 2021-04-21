@@ -282,7 +282,7 @@ ul.menu-links-desktop {
   font-weight: 400;
   padding-bottom: 15px;
   list-style-type: none;
-  font-size: clamp(13px, calc(0.8125rem + ((1vw - 3px) * 0.1852)), 16px);
+  font-size: 13px;
   transition: all 0.2s ease-in-out;
   border-bottom: #ffffff00 2px solid;
 }
@@ -658,13 +658,14 @@ ul.menu-links-desktop {
   z-index: 4;
 }
 .get-in-home-text h2 {
-  font-size: clamp(60px, calc(3.75rem + ((1vw - 10px) * 1.5217)), 74px);
+  font-size: 60px;
   text-align: center;
   margin-bottom: 0px;
 }
 .get-in-home-text p {
   text-align: center;
-  font-size: clamp(18px, calc(1.125rem + ((1vw - 10px) * 0.8696)), 26px);
+  margin-top: 0px;
+  font-size: 18px;
   margin-bottom: 50px;
 }
 .get-in-home-text h2,
@@ -1228,6 +1229,17 @@ input:required:not(:placeholder-shown):invalid {
     height: 445px;
   }
 }
+@media (max-width: 1600px) and (min-width: 1250px) {
+  .inspire-yourself-text-right {
+    width: 50%;
+    padding-left: 130px;
+  }
+
+  .inspire-yourself-text {
+    padding-left: 90px;
+    padding-right: 120px;
+  }
+}
 @media (max-width: 1500px) {
   .header-wrap-left,
   .section-building-left,
@@ -1376,6 +1388,7 @@ input:required:not(:placeholder-shown):invalid {
   }
   .find-a-quiet-button {
     text-align: center;
+    padding-left: 0;
   }
   .get-in-home-wave-bottom,
   .get-in-home-wave-top {
@@ -1630,8 +1643,9 @@ input:required:not(:placeholder-shown):invalid {
     margin-bottom: 0px;
   }
   .get-in-home-text p {
+    margin-top: 0px;
     text-align: center;
-    font-size: clamp(18px, calc(1.125rem + ((1vw - 3px) * 1.1429)), 26px);
+    font-size: 18px;
     margin-bottom: 50px;
   }
   .section-find-a-quiet-place {
@@ -1735,6 +1749,10 @@ input:required:not(:placeholder-shown):invalid {
   }
   .find-a-quiet-row .icons-text {
     font-size: 14px;
+  }
+
+  .get-in-home-text h2 {
+    font-size: 30px;
   }
   .gallery-text h2 {
     font-size: 25px;
