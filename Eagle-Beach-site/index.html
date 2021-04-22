@@ -65,19 +65,19 @@
         <nav class="mobile-nav">
           <ul>
             <li class="menu-links-mobile-home">
-              <a href="#section-building">EAGLE BEACH</a>
+              <a href="#section-building" onclick="uncheckMenu()">EAGLE BEACH</a>
             </li>
             <li class="menu-links-mobile-tour360">
-              <a href="#section-get-in-home">TOUR 360°</a>
+              <a href="#section-get-in-home" onclick="uncheckMenu()">TOUR 360°</a>
             </li>
             <li class="menu-links-mobile-localizacao">
-              <a href="#section-few-meters-from-the-beach">LOCALIZAÇÃO</a>
+              <a href="#section-few-meters-from-the-beach" onclick="uncheckMenu()">LOCALIZAÇÃO</a>
             </li>
             <li class="menu-links-mobile-infraestrutura">
-              <a href="#section-project-offers-blueprints">INFRAESTRUTURA</a>
+              <a href="#section-project-offers-blueprints" onclick="uncheckMenu()">INFRAESTRUTURA</a>
             </li>
             <li class="menu-links-mobile-contato">
-              <a href="#section-form">CONTATO</a>
+              <a href="#section-form" onclick="uncheckMenu()">CONTATO</a>
             </li>
           </ul>
         </nav>
@@ -652,6 +652,9 @@
 <script>
 
 
+
+
+  var myCheckbox = document.getElementById('mobile-menu-button');
   // Get the modal
   var modal = document.getElementById("find-a-quiet-place-video-myModal");
 
@@ -678,7 +681,9 @@
     }
   }
 
-
+  function uncheckMenu() {
+    myCheckbox.checked = false;
+  }
 
   //slider 
 
